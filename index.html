@@ -6,7 +6,7 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
   <title>House Of Finance</title>
-  <meta content="Personalised Investments for Happy You in the Future." name="description">
+  <meta content="Personalised Investments for Happy You!!" name="description">
   <meta content="Investment,Robo Investment,ETF,Mutual Funds." name="keywords">
 
   <!-- Favicons -->
@@ -27,6 +27,48 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
+  <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+  // Load google charts
+  var arr = [["10","90"],["30","70"],["50","50"],["70","30"],["95","5"]];
+  var num = 0;
+  google.charts.load('current', {'packages':['corechart']});
+  google.charts.setOnLoadCallback(drawChart);
+  
+  // Draw the chart and set the chart values
+  function drawChart() {
+    var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Equity');
+        data.addColumn('number', 'Safe Assets');
+        data.addRow(['Equity',parseInt(arr[num][0])]);
+        data.addRow(['Safe Assets',parseInt(arr[num][1])]);
+    // var data = google.visualization.arrayToDataTable([
+    // ['Equity', 'Safe Assets'],
+    // [parseInt(arr[num][0]), parseInt(arr[num][1])]
+  // ]);
+  
+    // Optional; add a title and set the width and height of the chart
+    var options = {'title':'Your Recommended Portfolio', 'width':600, 'height':500,is3D:true};
+  
+    // Display the chart inside the <div> element with id="piechart"
+    var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+    chart.draw(data, options);
+  }
+
+  function re_draw(nos){
+    num=nos;
+	  drawChart();
+  }
+  </script>
 
 </head>
 
@@ -63,7 +105,7 @@
           <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
           <li><a class="nav-link scrollto" href="#services">Why Invest Here?</a></li>
           <li><a class="nav-link scrollto" href="#testimonials">FAQs</a></li>
-          <li><a class="nav-link scrollto " href="#portfolio">Trending Portfolios</a></li>
+          <li><a class="nav-link scrollto " href="#portfolio">Recommended Portfolios</a></li>
           <li><a class="nav-link scrollto" href="#about">About Us</a></li>
           <!-- <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
@@ -94,10 +136,11 @@
   <section id="hero">
 
     <div class="hero-content" data-aos="fade-up">
-      <h3>Personalised Investments<br> for a <span>Happy You</span> in Future!</h3>
+      <h3>Personalised Investments<br> for a <span>Happy You</span></h3>
+      <h4>Our Robo App is coming soon to help you Invest easily and build your Capital.</h4>
       <div>
         <a href="#about" class="btn-get-started scrollto">Get Started</a>
-        <a href="#portfolio" class="btn-projects scrollto">Our Projects</a>
+        <!-- <a href="#portfolio" class="btn-projects scrollto">Our Projects</a> -->
       </div>
     </div>
 
@@ -119,7 +162,7 @@
      <section id="services">
       <div class="container" data-aos="fade-up">
         <div class="section-header">
-          <h2>Why Should I Invest Here?</h2>
+          <h2>Why Should You Choose House Of Finance?</h2>
           <p>Sed tamen tempor magna labore dolore dolor sint tempor duis magna elit veniam aliqua esse amet veniam enim export quid quid veniam aliqua eram noster malis nulla duis fugiat culpa esse aute nulla ipsum velit export irure minim illum fore</p>
         </div>
 
@@ -137,15 +180,15 @@
             <div class="box">
               <div class="icon"><i class="bi bi-card-checklist"></i></div>
               <h4 class="title"><a href="">Artificial Intelligence</a></h4>
-              <p class="description">Automated Advisory and Investing using our Finest Artificial Intelligence Models will Invest your Money automatically in the suitable funds based on your portfolio.</p>
+              <p class="description">Intelligent advisory and automated investing using our finest AI models which will invest your money in the recommended portfolio of Mutual Funds, ETFs and bonds.</p>
             </div>
           </div>
 
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
             <div class="box">
               <div class="icon"><i class="bi bi-bar-chart"></i></div>
-              <h4 class="title"><a href="">Capital Protection</a></h4>
-              <p class="description">Rebalacing for Capital Protection and Risk Adjusted Growth.</p>
+              <h4 class="title"><a href="">Rebalancing</a></h4>
+              <p class="description">Rebalancing for Capital protection and Risk Adjusted Growth.</p>
             </div>
           </div>
 
@@ -160,7 +203,7 @@
             <div class="box">
               <div class="icon"><i class="bi bi-card-checklist"></i></div>
               <h4 class="title"><a href="">Flexible Investment Options</a></h4>
-              <p class="description">With Our flexible investment options you can invest with Recurring Investments or Lumpsum Investment.</p>
+              <p class="description">Recurring Investment or Lumpsum Investment.</p>
             </div>
           </div>
 
@@ -192,7 +235,7 @@
             <p>Sed tamen tempor magna labore dolore dolor sint tempor duis magna elit veniam aliqua esse amet veniam enim export quid quid veniam aliqua eram noster malis nulla duis fugiat culpa esse aute nulla ipsum velit export irure minim illum fore</p>
           </div>
   
-          <div class="testimonials-slider swiper-container" data-aos="fade-up" data-aos-delay="100">
+          <!-- <div class="testimonials-slider swiper-container" data-aos="fade-up" data-aos-delay="100">
             <div class="swiper-wrapper">
   
               <div class="swiper-slide">
@@ -206,7 +249,7 @@
                   <h3>Saul Goodman</h3>
                   <h4>Ceo &amp; Founder</h4>
                 </div>
-              </div><!-- End testimonial item -->
+              </div>
   
               <div class="swiper-slide">
                 <div class="testimonial-item">
@@ -219,7 +262,7 @@
                   <h3>Sara Wilsson</h3>
                   <h4>Designer</h4>
                 </div>
-              </div><!-- End testimonial item -->
+              </div>
   
               <div class="swiper-slide">
                 <div class="testimonial-item">
@@ -232,7 +275,7 @@
                   <h3>Jena Karlis</h3>
                   <h4>Store Owner</h4>
                 </div>
-              </div><!-- End testimonial item -->
+              </div>
   
               <div class="swiper-slide">
                 <div class="testimonial-item">
@@ -245,7 +288,7 @@
                   <h3>Matt Brandon</h3>
                   <h4>Freelancer</h4>
                 </div>
-              </div><!-- End testimonial item -->
+              </div>
   
               <div class="swiper-slide">
                 <div class="testimonial-item">
@@ -258,130 +301,113 @@
                   <h3>John Larson</h3>
                   <h4>Entrepreneur</h4>
                 </div>
-              </div><!-- End testimonial item -->
+              </div>
   
             </div>
             <div class="swiper-pagination"></div>
-          </div>
+          </div> -->
   
+          <div class="panel-group" id="accordion" data-aos="fade-up" data-aos-delay="100">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+                    What is Robo advisory?</a>
+                </h4>
+              </div>
+              <div id="collapse1" class="panel-collapse collapse in">
+                <div class="panel-body">Robo-advisors are digital/online platforms that provide automated, algorithm-driven financial planning and investing services with little to no human supervision.(This definition is from Investopedia)</div>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+                    What are Auto Investments?</a>
+                </h4>
+              </div>
+              <div id="collapse2" class="panel-collapse collapse">
+                <div class="panel-body">It is a feature of Robo advisory which makes the investment on behalf of you in the recommended portfolio.</div>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
+                    What is the minimum amount to start investing on HOF?</a>
+                </h4>
+              </div>
+              <div id="collapse3" class="panel-collapse collapse">
+                <div class="panel-body">You could start investing with us with as low as Rs. 100 in your account every month.</div>
+              </div>
+            </div>
+          </div>
         </div>
       </section><!-- End Testimonials Section -->
 
-       <!-- ======= Portfolio Section ======= -->
-    <section id="portfolio" class="portfolio">
-      <div class="container" data-aos="fade-up">
-        <div class="section-header">
-          <h2>Trending Portfolios</h2>
-          <p>Sed tamen tempor magna labore dolore dolor sint tempor duis magna elit veniam aliqua esse amet veniam enim export quid quid veniam aliqua eram noster malis nulla duis fugiat culpa esse aute nulla ipsum velit export irure minim illum fore</p>
+      <section id="philosophy">
+        <div class="container" data-aos="fade-up">
+          <div class="section-header">
+            <h2>Investment Philosophy</h2>
+            <p>We leverage Artificial intelligence to construct portfolios with 2 fundamental blocks - includes a Performance seeking part and the Liability hedging part. Our platform is driven by algorithms to offer unbiased portfolio advisory for your personal goals and expected returns out of our pre selected universe of MF and ETF's.</p>
+          </div>
+          </div>
+      </section>
+
+      <section id="portfolio">
+        <div class="container" data-aos="fade-up">
+          <div class="section-header">
+            <h2>Glimpse into your Portfolio allocation</h2>
+            <p>How we tailor your portfolio based on your Risk appetite.</p>
+          </div>
+          <table class="table table-bordered">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">Risk value</th>
+                <th scope="col">Equity</th>
+                <th scope="col">Safe assets</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row"><input type=radio name=type value=300 onclick="re_draw(0)"; CHECKED>  1</th>
+                <td>10</td>
+                <td>90</td>
+              </tr>
+              <tr>
+                <th scope="row"><input type=radio name=type value=100 onclick="re_draw(1)";>  2</th>
+                <td>30</td>
+                <td>70</td>
+                
+              </tr>
+              <tr>
+                <th scope="row"><input type=radio name=type value=100 onclick="re_draw(2)";>  3</th>
+                <td>50</td>
+                <td>50</td>
+                
+              </tr>
+
+              <tr>
+                <th scope="row"><input type=radio name=type value=100 onclick="re_draw(3)";>  4</th>
+                <td>70</td>
+                <td>30</td>
+                
+              </tr>
+
+              <tr>
+                <th scope="row"><input type=radio name=type value=100 onclick="re_draw(4)";>  5</th>
+                <td>95</td>
+                <td>5</td>
+                
+              </tr>
+            </tbody>
+          </table>
+          <div  class="d-flex justify-content-center">
+          <div id="piechart"></div>
         </div>
-
-        <div class="row" data-aos="fade-up" data-aos-delay="100">
-          <div class="col-lg-12 d-flex justify-content-center">
-            <ul id="portfolio-flters">
-              <li data-filter="*" class="filter-active">All Sectors</li>
-              <li data-filter=".filter-app">Equity</li>
-              <li data-filter=".filter-card">Mutual Funds</li>
-              <li data-filter=".filter-web">Energy</li>
-            </ul>
           </div>
-        </div>
-
-        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>App 1</h4>
-              <p>App</p>
-              <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 1"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <img src="assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Web 3</h4>
-              <p>Web</p>
-              <a href="assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <img src="assets/img/portfolio/portfolio-3.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>App 2</h4>
-              <p>App</p>
-              <a href="assets/img/portfolio/portfolio-3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 2"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <img src="assets/img/portfolio/portfolio-4.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Card 2</h4>
-              <p>Card</p>
-              <a href="assets/img/portfolio/portfolio-4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Card 2"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <img src="assets/img/portfolio/portfolio-5.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Web 2</h4>
-              <p>Web</p>
-              <a href="assets/img/portfolio/portfolio-5.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 2"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <img src="assets/img/portfolio/portfolio-6.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>App 3</h4>
-              <p>App</p>
-              <a href="assets/img/portfolio/portfolio-6.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 3"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <img src="assets/img/portfolio/portfolio-7.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Card 1</h4>
-              <p>Card</p>
-              <a href="assets/img/portfolio/portfolio-7.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Card 1"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <img src="assets/img/portfolio/portfolio-8.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Card 3</h4>
-              <p>Card</p>
-              <a href="assets/img/portfolio/portfolio-8.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Card 3"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <img src="assets/img/portfolio/portfolio-9.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Web 3</h4>
-              <p>Web</p>
-              <a href="assets/img/portfolio/portfolio-9.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Portfolio Section -->
+      </section>
+     
 
     <!-- ======= Clients Section ======= -->
     <section id="clients">
@@ -603,6 +629,8 @@
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
+  
+
   <!-- Vendor JS Files -->
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -610,7 +638,7 @@
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-
+  
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
 
