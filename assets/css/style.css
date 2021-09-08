@@ -131,7 +131,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #header #logo h1 a {
-  color: #0c2e8a;
+  color: #000000;
 }
 
 #header #logo h1 a span {
@@ -268,7 +268,7 @@ h1, h2, h3, h4, h5, h6 {
 * Mobile Navigation 
 */
 .mobile-nav-toggle {
-  color: #0c2e8a;
+  color: #000000;
   font-size: 28px;
   cursor: pointer;
   display: none;
@@ -323,7 +323,7 @@ h1, h2, h3, h4, h5, h6 {
 .navbar-mobile a {
   padding: 10px 20px;
   font-size: 15px;
-  color: #0c2e8a;
+  color: #000000;
 }
 
 .navbar-mobile a:hover, .navbar-mobile .active, .navbar-mobile li:hover > a {
@@ -393,14 +393,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #hero .hero-content h2 {
-  color: #0c2e8a;
+  color: #000000;
   margin-bottom: 30px;
   font-size: 64px;
   font-weight: 700;
 }
 
 #hero .hero-content h3 {
-  color: #0c2e8a;
+  color: #000000;
   margin-bottom: 30px;
   font-size: 48px;
   font-weight: 500;
@@ -435,13 +435,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #hero .hero-content .btn-get-started {
-  background: #0c2e8a;
-  border: 2px solid #0c2e8a;
+  background: #c99a4f;
+  border: 2px solid #c99a4f;
 }
 
 #hero .hero-content .btn-get-started:hover {
   background: none;
-  color: #0c2e8a;
+  color: #c99a4f;
 }
 
 #hero .hero-content .btn-projects {
@@ -495,7 +495,7 @@ section {
 
 .section-header h2 {
   font-size: 32px;
-  color: #0c2e8a;
+  color: #000000;
   text-transform: uppercase;
   font-weight: 700;
   position: relative;
@@ -597,7 +597,7 @@ section {
 }
 
 #about .content h2 {
-  color: #0c2e8a;
+  color: #000000;
   font-weight: 700;
   font-size: 36px;
   font-family: "Raleway", sans-serif;
@@ -668,8 +668,8 @@ section {
 }
 
 #services .box .icon i:before {
-  background: #0c2e8a;
-  background: linear-gradient(45deg, #0c2e8a 0%, #a90c34 100%);
+  background: #000000;
+  background: linear-gradient(45deg, #000000 0%, #c99a4f 100%);
   background-clip: border-box;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -987,7 +987,7 @@ section {
 /* Call To Action Section
 --------------------------------*/
 #call-to-action {
-  background: #081e5b;
+  background: #c99a4f;
   background-size: cover;
   padding: 40px 0;
 }
@@ -1211,7 +1211,7 @@ section {
 }
 
 #contact .php-email-form button[type="submit"] {
-  background: #081e5b;
+  background: #c99a4f;
   border: 0;
   border-radius: 3px;
   padding: 10px 30px;
